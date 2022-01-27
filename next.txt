@@ -1,0 +1,4 @@
+
+
+* Important: Do remember they want the theme choice to be saved in
+             local storage. Implement that in the app as well.
