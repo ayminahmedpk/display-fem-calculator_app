@@ -1,0 +1,54 @@
+/* markup
+    <input
+        type="range"
+        min="1"
+        max="3"
+        value="1"
+        class="toggle__slider"
+        id="myRange"
+        >
+*/
+
+/* The slider itself */
+.toggle__slider {
+    // Resets
+    -webkit-appearance : none;
+    appearance         : none;
+    outline            : none;
+
+    width              : 100%;
+    height             : 26px;
+    background         : $toggle-background;
+    border-radius      : 15px;
+    padding            : 4px;
+  }
+  
+  /* Chrome, Opera, Safari, Edge */
+  .toggle__slider::-webkit-slider-thumb {
+    // Resets
+    -webkit-appearance : none    ;
+    appearance         : none    ;
+
+    width         : 19px    ;
+    height        : 19px    ;
+    border        : 1px solid black;
+    border-radius : 15px    ;
+    
+    background    : $toggle ;
+    
+    cursor        : pointer ;
+  }
+  
+  
+  /* Firefox */
+  .toggle__slider::-moz-range-thumb {
+    // reset
+    border: none;
+
+    width         : 19px    ;
+    height        : 19px    ;
+    background    : $toggle ;
+    cursor        : pointer ;
+    border-radius : 15px;
+    border        : 1px solid black;
+  }

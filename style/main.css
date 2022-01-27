@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  background-color: #3a4764;
+  color: white;
+  font-family: 'Spartan', sans-serif;
+  font-weight: 700;
+}
+
+.content-container {
+  padding: 28px 24px;
+}
+
+.labels-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo {
+  font-size: 32px;
+  letter-spacing: -0.02em;
+}
+
+.theme-label {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  margin: auto 22px 4px auto;
+}
+
+/* -------------------------------- <toggle> -------------------------------- */
+.toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 71px;
+}
+
+.toggle__labels {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding: 0px 13px;
+  font-size: 12px;
+}
+
+.toggle__labels .label-1 {
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.toggle__labels .label-3 {
+  -webkit-transform: translate(50%);
+          transform: translate(50%);
+}
+
+.toggle__labels .label-2 {
+  margin-left: 13px;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.toggle__slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  outline: none;
+  width: 100%;
+  padding: 4px;
+  margin-top: 4px;
+  background: #232c43;
+  border-radius: 15px;
+}
+
+/* Slider-thumb (Chrome, Opera, Safari, Edge) */
+.toggle__slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid black;
+  border-radius: 15px;
+  background: #d03f2f;
+  cursor: pointer;
+}
+
+/* Slider-thumb (Firefox) */
+.toggle__slider::-moz-range-thumb {
+  border: none;
+  width: 18px;
+  height: 18px;
+  background: #d03f2f;
+  cursor: pointer;
+  border-radius: 15px;
+  border: 1px solid black;
+}
+
+/* ------------------------------- <toggle /> ------------------------------- */
+/*# sourceMappingURL=main.css.map */
