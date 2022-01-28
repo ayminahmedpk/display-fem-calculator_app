@@ -2,3 +2,5 @@
 
 * Important: Do remember they want the theme choice to be saved in
              local storage. Implement that in the app as well.
+
+* See if you can make it such that keyboard input can trigger button presses.

@@ -8,15 +8,14 @@ $toggle-background      : hsl(223, 31%, 20%) ;
 $keypad-background      : $toggle-background   ;
 $screen-background      : hsl(224, 36%, 15%) ;
 
-$key-background         : hsl(225, 21%, 49%) ;
-$key-shadow             : hsl(224, 28%, 35%) ;
-
-$key-background         : hsl(6, 63%, 50%)   ;
-$toggle                 : $key-background      ;
-$key-shadow             : hsl(6, 70%, 34%)   ;
-
 $key-background         : hsl(30, 25%, 89%)  ;
 $key-shadow             : hsl(28, 16%, 65%)  ;
+$blue-key-background    : hsl(225, 21%, 49%) ;
+$blue-key-shadow        : hsl(224, 28%, 35%) ;
+$red-key-background     : hsl(6, 63%, 50%)   ;
+$red-key-shadow         : hsl(6, 70%, 34%)   ;
+
+$toggle                 : $red-key-background  ;
 
 $Very-dark-grayish-blue : hsl(221, 14%, 31%) ;
 $White                  : hsl(0, 0, 100%)    ;
@@ -34,10 +33,29 @@ html {
     color            : $White                ;
     font-family      : 'Spartan', sans-serif ;
     font-weight      : 700                   ;
+    // height: 100%;
 }
 
+/* body {
+    height: 100%;
+} */
 
-.content-container { padding: 28px 24px; }
+
+.content-container {
+    /* height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; */
+    padding: 28px 24px;
+    max-width: 375px;
+    
+    
+    /* & > div {
+        width: 327px;
+        &:first-child { margin-top: auto;}
+        &:last-child {margin-bottom: auto;}
+    } */
+}
 
 
 .labels-container {
@@ -54,9 +72,10 @@ html {
 
 
 .theme-label {
+    margin : auto 22px 4px auto;
+    
     font-size      : 12px;
     letter-spacing : 0.08em;
-    margin         : auto 22px 4px auto;
 }
 
 
@@ -98,8 +117,10 @@ html {
     margin-top    : 4px;
     background    : $toggle-background;
     border-radius : 15px;
+
+    cursor: pointer;
 }
-  
+
 
 /* Slider-thumb (Chrome, Opera, Safari, Edge) */
 .toggle__slider::-webkit-slider-thumb {
@@ -114,10 +135,13 @@ html {
 
     background    : $toggle ;
 
-    cursor        : pointer ;
+    /* cursor: grab;
+    &:active {
+        cursor:grabbing;
+    } */
 }
-  
-  
+
+
 /* Slider-thumb (Firefox) */
 .toggle__slider::-moz-range-thumb {
     // reset
@@ -129,5 +153,105 @@ html {
     cursor        : pointer ;
     border-radius : 15px;
     border        : 1px solid black;
+
+    /* cursor: -moz-grab;
+    &:active {
+        cursor: -moz-grabbing;
+    } */
 }
 /* ------------------------------- <toggle /> ------------------------------- */
+
+
+
+.screen {
+    display         : flex     ;
+    justify-content : flex-end ;
+    align-items     : center   ;
+    
+    margin-top    : 32px ;
+    padding       : 24px ;
+    border-radius : 10px ;
+
+    background-color : $screen-background ;
+
+    .screen-text {
+        font-size        : 32px               ;
+        letter-spacing   : -0.015em           ;
+        line-height      : 1.25               ;
+    }
+}
+
+
+.keypad-container {
+    margin-top    : 24px  ;
+    height        : 420px ;
+    border-radius : 10px  ;
+    padding       : 24px 24px 28px;
+
+    background-color : $keypad-background;
+}
+
+
+
+/* -------------------------------- <keypad> -------------------------------- */
+.keypad {
+    display               : grid;
+    grid-template-columns : repeat(4, 60px);
+    grid-template-rows    : repeat(5, 60px);
+    grid-column-gap       : 13px;
+    grid-row-gap          : 17px;
+}
+
+
+.key {
+    border        : none ;
+    border-radius : 5px  ;
+
+    background-color : $key-background             ;
+    box-shadow       : 0px 4px 0px 0px $key-shadow ;
+
+    cursor: pointer;
+
+    &:active {
+        transform : translateY(2px) scale(0.95);
+        filter    : brightness(80%);
+    }
+
+    .key-text {
+        font-family : 'Spartan', sans-serif ;
+        font-weight : 700                   ;
+        font-size   : 28px                  ;
+        margin-top  : 6px                   ;
+    }
+}
+
+
+.key.key-long {
+    grid-column: span 2;
+}
+
+
+.key.key-red,
+.key.key-blue {
+    .key-text {
+        margin-top     : 2px;
+        margin-right   : 1px;
+
+        color          : $White  ;
+        font-size      : 17px    ;
+        letter-spacing : -0.06em ;
+    }
+}
+
+
+.key.key-blue {
+    background-color : $blue-key-background             ;
+    box-shadow       : 0px 4px 0px 0px $blue-key-shadow ;
+}
+
+
+.key.key-red {
+    background-color : $red-key-background             ;
+    box-shadow       : 0px 4px 0px 0px $red-key-shadow ;
+}
+/* ------------------------------- <keypad /> ------------------------------- */
