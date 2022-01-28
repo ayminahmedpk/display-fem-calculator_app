@@ -1,5 +1,7 @@
 
 
+* Implement themes (with a satisfactory SASS implementation)
+
 * Calculator application
 
 
