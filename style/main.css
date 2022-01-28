@@ -228,4 +228,59 @@ html {
 }
 
 /* ------------------------------- <keypad /> ------------------------------- */
+@media screen and (min-width: 600px) {
+  .content-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: none;
+    padding: 96px;
+  }
+  .content-container > div {
+    width: 100%;
+    max-width: 540px;
+  }
+  .logo {
+    margin-top: 7px;
+  }
+  .screen {
+    padding: 32px;
+  }
+  .screen .screen-text {
+    font-size: 48px;
+    letter-spacing: -0.02em;
+  }
+  .keypad-container {
+    height: 480px;
+    padding: 34px 32px 36px 30px;
+  }
+  .keypad {
+    -ms-grid-columns: (101px)[4];
+        grid-template-columns: repeat(4, 101px);
+    grid-column-gap: 25px;
+    grid-row-gap: 28px;
+  }
+  .key {
+    border-radius: 10px;
+  }
+  .key .key-text {
+    font-size: 32px;
+  }
+  .key.key-red .key-text,
+  .key.key-blue .key-text {
+    margin: 8px 0px 0px 1px;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+  }
+}
 /*# sourceMappingURL=main.css.map */
