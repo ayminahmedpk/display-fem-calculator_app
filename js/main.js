@@ -5,10 +5,11 @@ const slider = document.querySelector('.toggle__slider');
 
 
 const setInitialTheme = () => {    
-    const theme = localStorage.getItem('prefers-color-scheme');
-    if(theme) {
-        slider.value = parseInt(theme.slice(-1));
-        body.className = theme;
+    const themeNumber = parseInt(localStorage.getItem('prefers-color-scheme'));
+    if(themeNumber) {
+        slider.value    = themeNumber;
+        const themeName = `theme-${themeNumber}`;
+        body.className  = themeName;
     }
     else {
         slider.value = 1;
@@ -18,9 +19,9 @@ const setInitialTheme = () => {
 
 
 const handleThemeChange = (e) => {
-    const theme = `theme-${e.target.value}`;
-    localStorage.setItem('prefers-color-scheme', theme)
-    body.className = theme;
+    localStorage.setItem('prefers-color-scheme', e.target.value)
+    const themeName = `theme-${e.target.value}`;
+    body.className = themeName;
 }
 
 

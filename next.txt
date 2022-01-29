@@ -1,12 +1,12 @@
 
 
-* Implement themes (with a satisfactory SASS implementation)
-
 * Calculator application
 
 
 
 Second submission:
+
+- Better theme implementation method (sass maps? etc.)
 
 - Responsiveness : Both layouts highly responsive, as well as intermediate
                    layout

@@ -1,4 +1,167 @@
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+/* ------------------------------- <theme-1> -------------------------------- */
+/* ------------------------------ <theme-1 /> ------------------------------- */
+/* ------------------------------- <theme-2> -------------------------------- */
+/* ------------------------------ <theme-2 /> ------------------------------- */
+/* ------------------------------ <theme-3 /> ------------------------------- */
+/* ------------------------------ <theme-3 /> ------------------------------- */
+body.theme-1 {
+  background-color: #3a4764;
+  color: white;
+  /* Slider-thumb (Chrome, Opera, Safari, Edge) */
+  /* Slider-thumb (Firefox) */
+}
+
+body.theme-1 .toggle__slider {
+  background: #232c43;
+}
+
+body.theme-1 .toggle__slider::-webkit-slider-thumb {
+  background: #d03f2f;
+}
+
+body.theme-1 .toggle__slider::-moz-range-thumb {
+  background: #d03f2f;
+}
+
+body.theme-1 .screen {
+  background-color: #182034;
+}
+
+body.theme-1 .keypad-container {
+  background-color: #232c43;
+}
+
+body.theme-1 .key {
+  background-color: #eae3dc;
+  -webkit-box-shadow: 0px 4px 0px 0px #b4a597;
+          box-shadow: 0px 4px 0px 0px #b4a597;
+}
+
+body.theme-1 .key.key-control .key-text,
+body.theme-1 .key.key-equals .key-text {
+  color: white;
+}
+
+body.theme-1 .key.key-control {
+  background-color: #637097;
+  -webkit-box-shadow: 0px 4px 0px 0px #404e72;
+          box-shadow: 0px 4px 0px 0px #404e72;
+}
+
+body.theme-1 .key.key-equals {
+  background-color: #d03f2f;
+  -webkit-box-shadow: 0px 4px 0px 0px #93261a;
+          box-shadow: 0px 4px 0px 0px #93261a;
+}
+
+body.theme-2 {
+  background-color: #e6e6e6;
+  color: #35352c;
+  /* Slider-thumb (Chrome, Opera, Safari, Edge) */
+  /* Slider-thumb (Firefox) */
+}
+
+body.theme-2 .toggle__slider {
+  background: #d1cccc;
+}
+
+body.theme-2 .toggle__slider::-webkit-slider-thumb {
+  background: #ca5502;
+}
+
+body.theme-2 .toggle__slider::-moz-range-thumb {
+  background: #ca5502;
+}
+
+body.theme-2 .screen {
+  background-color: #ededed;
+}
+
+body.theme-2 .keypad-container {
+  background-color: #d1cccc;
+}
+
+body.theme-2 .key {
+  background-color: #e5e4e1;
+  -webkit-box-shadow: 0px 4px 0px 0px #a69d91;
+          box-shadow: 0px 4px 0px 0px #a69d91;
+}
+
+body.theme-2 .key.key-control .key-text,
+body.theme-2 .key.key-equals .key-text {
+  color: white;
+}
+
+body.theme-2 .key.key-control {
+  background-color: #377f86;
+  -webkit-box-shadow: 0px 4px 0px 0px #1b5f65;
+          box-shadow: 0px 4px 0px 0px #1b5f65;
+}
+
+body.theme-2 .key.key-equals {
+  background-color: #ca5502;
+  -webkit-box-shadow: 0px 4px 0px 0px #893901;
+          box-shadow: 0px 4px 0px 0px #893901;
+}
+
+body.theme-3 {
+  background-color: #160628;
+  color: #ffe53d;
+  /* Slider-thumb (Chrome, Opera, Safari, Edge) */
+  /* Slider-thumb (Firefox) */
+}
+
+body.theme-3 .toggle__slider {
+  background: #1d0934;
+}
+
+body.theme-3 .toggle__slider::-webkit-slider-thumb {
+  background: #00e0d1;
+}
+
+body.theme-3 .toggle__slider::-moz-range-thumb {
+  background: #00e0d1;
+}
+
+body.theme-3 .screen {
+  background-color: #1d0934;
+}
+
+body.theme-3 .keypad-container {
+  background-color: #1d0934;
+}
+
+body.theme-3 .key {
+  background-color: #341c4f;
+  -webkit-box-shadow: 0px 4px 0px 0px #871c9c;
+          box-shadow: 0px 4px 0px 0px #871c9c;
+}
+
+body.theme-3 .key .key-text {
+  color: #ffe53d;
+}
+
+body.theme-3 .key.key-control .key-text {
+  color: white;
+}
+
+body.theme-3 .key.key-equals .key-text {
+  color: black;
+}
+
+body.theme-3 .key.key-control {
+  background-color: #58077d;
+  -webkit-box-shadow: 0px 4px 0px 0px #bc15f4;
+          box-shadow: 0px 4px 0px 0px #bc15f4;
+}
+
+body.theme-3 .key.key-equals {
+  background-color: #00e0d1;
+  -webkit-box-shadow: 0px 4px 0px 0px #6cf9f2;
+          box-shadow: 0px 4px 0px 0px #6cf9f2;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,9 +169,7 @@
           box-sizing: border-box;
 }
 
-html {
-  background-color: #3a4764;
-  color: white;
+body {
   font-family: 'Spartan', sans-serif;
   font-weight: 700;
 }
@@ -101,7 +262,6 @@ html {
   width: 100%;
   padding: 4px;
   margin-top: 4px;
-  background: #232c43;
   border-radius: 15px;
   cursor: pointer;
 }
@@ -112,9 +272,7 @@ html {
   appearance: none;
   width: 18px;
   height: 18px;
-  border: 1px solid black;
   border-radius: 15px;
-  background: #d03f2f;
   /* cursor: grab;
     &:active {
         cursor:grabbing;
@@ -126,10 +284,8 @@ html {
   border: none;
   width: 18px;
   height: 18px;
-  background: #d03f2f;
   cursor: pointer;
   border-radius: 15px;
-  border: 1px solid black;
   /* cursor: -moz-grab;
     &:active {
         cursor: -moz-grabbing;
@@ -150,7 +306,6 @@ html {
   margin-top: 32px;
   padding: 24px;
   border-radius: 10px;
-  background-color: #182034;
 }
 
 .screen .screen-text {
@@ -164,7 +319,6 @@ html {
   height: 420px;
   border-radius: 10px;
   padding: 24px 24px 28px;
-  background-color: #232c43;
 }
 
 /* -------------------------------- <keypad> -------------------------------- */
@@ -182,9 +336,6 @@ html {
 .key {
   border: none;
   border-radius: 5px;
-  background-color: #eae3dc;
-  -webkit-box-shadow: 0px 4px 0px 0px #b4a597;
-          box-shadow: 0px 4px 0px 0px #b4a597;
   cursor: pointer;
 }
 
@@ -206,25 +357,12 @@ html {
   grid-column: span 2;
 }
 
-.key.key-red .key-text,
-.key.key-blue .key-text {
+.key.key-control .key-text,
+.key.key-equals .key-text {
   margin-top: 2px;
   margin-right: 1px;
-  color: white;
   font-size: 17px;
   letter-spacing: -0.06em;
-}
-
-.key.key-blue {
-  background-color: #637097;
-  -webkit-box-shadow: 0px 4px 0px 0px #404e72;
-          box-shadow: 0px 4px 0px 0px #404e72;
-}
-
-.key.key-red {
-  background-color: #d03f2f;
-  -webkit-box-shadow: 0px 4px 0px 0px #93261a;
-          box-shadow: 0px 4px 0px 0px #93261a;
 }
 
 /* ------------------------------- <keypad /> ------------------------------- */
@@ -276,8 +414,8 @@ html {
   .key .key-text {
     font-size: 32px;
   }
-  .key.key-red .key-text,
-  .key.key-blue .key-text {
+  .key.key-control .key-text,
+  .key.key-equals .key-text {
     margin: 8px 0px 0px 1px;
     font-size: 20px;
     letter-spacing: -0.02em;

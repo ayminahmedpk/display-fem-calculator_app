@@ -1,0 +1,310 @@
+// Theme Variables
+
+/* ------------------------------- <theme-1> -------------------------------- */
+$theme-1-main-background        : hsl(222, 26%, 31%)           ;
+$theme-1-toggle-background      : hsl(223, 31%, 20%)           ;
+$theme-1-keypad-background      : $theme-1-toggle-background     ;
+$theme-1-screen-background      : hsl(224, 36%, 15%)           ;
+
+$theme-1-key-background         : hsl( 30, 25%, 89%)           ;
+$theme-1-key-shadow             : hsl( 28, 16%, 65%)           ;
+$theme-1-control-key-background : hsl(225, 21%, 49%)           ;
+$theme-1-control-key-shadow     : hsl(224, 28%, 35%)           ;
+$theme-1-equals-key-background  : hsl(  6, 63%, 50%)           ;
+$theme-1-equals-key-shadow      : hsl(  6, 70%, 34%)           ;
+
+$theme-1-toggle                 : $theme-1-equals-key-background ;
+
+$theme-1-Very-dark-grayish-blue : hsl(221, 14%,  31%)          ;
+$theme-1-text                   : hsl(  0,   0, 100%)          ;
+/* ------------------------------ <theme-1 /> ------------------------------- */
+
+/* ------------------------------- <theme-2> -------------------------------- */
+$theme-2-main-background        : hsl(0, 0%, 90%)              ;
+$theme-2-toggle-background      : hsl(0, 5%, 81%)              ;
+$theme-2-keypad-background      : $theme-2-toggle-background     ;
+$theme-2-screen-background      : hsl(0, 0%, 93%)              ;
+
+$theme-2-key-background         : hsl( 45,  7%, 89%)           ;
+$theme-2-key-shadow             : hsl( 35, 11%, 61%)           ;
+$theme-2-control-key-background : hsl(185, 42%, 37%)           ;
+$theme-2-control-key-shadow     : hsl(185, 58%, 25%)           ;
+$theme-2-equals-key-background  : hsl( 25, 98%, 40%)           ;
+$theme-2-equals-key-shadow      : hsl( 25, 99%, 27%)           ;
+
+$theme-2-toggle                 : $theme-2-equals-key-background ;
+
+$theme-2-Very-dark-grayish-blue : hsl(221, 14%, 31%)           ;
+$theme-2-text                   : hsl( 60, 10%, 19%)           ;
+/* ------------------------------ <theme-2 /> ------------------------------- */
+
+/* ------------------------------ <theme-3 /> ------------------------------- */
+$theme-3-main-background        : hsl(268, 75%,  9%)           ;
+$theme-3-toggle-background      : hsl(268, 71%, 12%)           ;
+$theme-3-keypad-background      : $theme-3-toggle-background     ;
+$theme-3-screen-background      : $theme-3-toggle-background     ;
+
+$theme-3-key-background         : hsl(268, 47%, 21%)            ;
+$theme-3-key-shadow             : hsl(290, 70%, 36%)            ;
+$theme-3-control-key-background : hsl(281, 89%, 26%)           ;
+$theme-3-control-key-shadow     : hsl(285, 91%, 52%)           ;
+$theme-3-equals-key-background  : hsl(176, 100%, 44%)             ;
+$theme-3-equals-key-shadow      : hsl(177, 92%, 70%)             ;
+
+$theme-3-toggle                 : $theme-3-equals-key-background ;
+
+$theme-3-Very-dark-grayish-blue : hsl(221, 14%, 31%)           ;
+$theme-3-text                   : hsl(52, 100%, 62%)              ;
+/* ------------------------------ <theme-3 /> ------------------------------- */
+
+
+
+
+
+
+
+
+
+
+body.theme-1 {
+    background-color : $theme-1-main-background ;
+    color            : $theme-1-text            ;
+
+
+    .toggle__slider {
+        background    : $theme-1-toggle-background ;
+    }
+
+
+    /* Slider-thumb (Chrome, Opera, Safari, Edge) */
+    .toggle__slider::-webkit-slider-thumb {
+        background    : $theme-1-toggle   ;
+    }
+
+
+    /* Slider-thumb (Firefox) */
+    .toggle__slider::-moz-range-thumb {
+        background : $theme-1-toggle   ;
+    }
+
+
+    .screen { background-color : $theme-1-screen-background ; }
+
+
+    .keypad-container { background-color : $theme-1-keypad-background ; }
+
+
+    .key {
+        background-color : $theme-1-key-background             ;
+        box-shadow       : 0px 4px 0px 0px $theme-1-key-shadow ;
+    }
+
+
+    .key.key-control,
+    .key.key-equals {
+        .key-text {
+            color : $theme-1-text ;
+        }
+    }
+
+
+    .key.key-control {
+        background-color : $theme-1-control-key-background             ;
+        box-shadow       : 0px 4px 0px 0px $theme-1-control-key-shadow ;
+    }
+
+
+    .key.key-equals {
+        background-color : $theme-1-equals-key-background             ;
+        box-shadow       : 0px 4px 0px 0px $theme-1-equals-key-shadow ;
+    }
+}
+
+
+
+
+body.theme-2 {
+    background-color : $theme-2-main-background ;
+    color            : $theme-2-text            ;
+
+
+    .toggle__slider {
+        background    : $theme-2-toggle-background ;
+    }
+
+
+    /* Slider-thumb (Chrome, Opera, Safari, Edge) */
+    .toggle__slider::-webkit-slider-thumb {
+        background    : $theme-2-toggle   ;
+    }
+
+
+    /* Slider-thumb (Firefox) */
+    .toggle__slider::-moz-range-thumb {
+        background : $theme-2-toggle   ;
+    }
+
+
+    .screen { background-color : $theme-2-screen-background ; }
+
+
+    .keypad-container { background-color : $theme-2-keypad-background ; }
+
+
+    .key {
+        background-color : $theme-2-key-background             ;
+        box-shadow       : 0px 4px 0px 0px $theme-2-key-shadow ;
+    }
+
+
+    .key.key-control,
+    .key.key-equals {
+        .key-text {
+            color : $theme-1-text ;
+        }
+    }
+
+
+    .key.key-control {
+        background-color : $theme-2-control-key-background             ;
+        box-shadow       : 0px 4px 0px 0px $theme-2-control-key-shadow ;
+    }
+
+
+    .key.key-equals {
+        background-color : $theme-2-equals-key-background             ;
+        box-shadow       : 0px 4px 0px 0px $theme-2-equals-key-shadow ;
+    }
+}
+
+
+
+
+body.theme-3 {
+    background-color : $theme-3-main-background ;
+    color            : $theme-3-text            ;
+
+
+    .toggle__slider {
+        background    : $theme-3-toggle-background ;
+    }
+
+
+    /* Slider-thumb (Chrome, Opera, Safari, Edge) */
+    .toggle__slider::-webkit-slider-thumb {
+        background    : $theme-3-toggle   ;
+    }
+
+
+    /* Slider-thumb (Firefox) */
+    .toggle__slider::-moz-range-thumb {
+        background : $theme-3-toggle   ;
+    }
+
+
+    .screen { background-color : $theme-3-screen-background ; }
+
+
+    .keypad-container { background-color : $theme-3-keypad-background ; }
+
+
+    .key {
+        background-color : $theme-3-key-background             ;
+        box-shadow       : 0px 4px 0px 0px $theme-3-key-shadow ;
+        .key-text {
+            color: $theme-3-text;
+        }
+    }
+
+
+    .key.key-control {
+        .key-text {
+            color : white ;
+        }
+    }
+
+    .key.key-equals {
+        .key-text {
+            color : black ;
+        }
+    }
+
+
+    .key.key-control {
+        background-color : $theme-3-control-key-background             ;
+        box-shadow       : 0px 4px 0px 0px $theme-3-control-key-shadow ;
+    }
+
+
+    .key.key-equals {
+        background-color : $theme-3-equals-key-background             ;
+        box-shadow       : 0px 4px 0px 0px $theme-3-equals-key-shadow ;
+    }
+}
+
+
+
+
+
+
+// body {
+//     background-color : $theme-1-main-background ;
+//     color            : $theme-1-text            ;
+// }
+
+
+
+// /* -------------------------------- <toggle> -------------------------------- */
+// .toggle__slider {
+//     background    : $theme-1-toggle-background ;
+// }
+
+
+// /* Slider-thumb (Chrome, Opera, Safari, Edge) */
+// .toggle__slider::-webkit-slider-thumb {
+//     border        : 1px solid black ;
+//     background    : $theme-1-toggle   ;
+// }
+
+
+// /* Slider-thumb (Firefox) */
+// .toggle__slider::-moz-range-thumb {
+//     border     : 1px solid black ;
+//     background : $theme-1-toggle   ;
+// }
+// /* ------------------------------- <toggle /> ------------------------------- */
+
+
+
+// .screen { background-color : $theme-1-screen-background ; }
+
+
+// .keypad-container { background-color : $theme-1-keypad-background ; }
+
+
+
+// /* -------------------------------- <keypad> -------------------------------- */
+// .key {
+//     background-color : $theme-1-key-background             ;
+//     box-shadow       : 0px 4px 0px 0px $theme-1-key-shadow ;
+// }
+
+// .key.key-control,
+// .key.key-equals {
+//     .key-text {
+//         color : $theme-1-text ;
+//     }
+// }
+
+
+// .key.key-control {
+//     background-color : $theme-1-control-key-background             ;
+//     box-shadow       : 0px 4px 0px 0px $theme-1-control-key-shadow ;
+// }
+
+
+// .key.key-equals {
+//     background-color : $theme-1-equals-key-background             ;
+//     box-shadow       : 0px 4px 0px 0px $theme-1-equals-key-shadow ;
+// }
+// /* ------------------------------- <keypad /> ------------------------------- */
