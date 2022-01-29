@@ -1,4 +1,5 @@
 
+import {Calculator} from './modules/calculator.js';
 
 const body   = document.querySelector('body');
 const slider = document.querySelector('.toggle__slider');
@@ -27,3 +28,15 @@ const handleThemeChange = (e) => {
 
 setInitialTheme();
 slider.addEventListener('change', (e) => { handleThemeChange(e); });
+
+
+
+
+//import {Menu} from './modules/menu';
+
+
+window.calculator = new Calculator();
+
+// To start, run context.enterMenu();
+
+//window.x = new submenu.A1();

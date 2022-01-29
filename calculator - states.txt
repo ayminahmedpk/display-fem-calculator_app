@@ -1,0 +1,86 @@
+Input types:
+
+	Number  [0,1,2,3,4,5,6,7,8,9]
+	Decimal [.]
+	Operand [x, /, +, -]
+	Equals  [=]
+	Delete  [DEL] 
+	C key   [RESET]
+
+
+Major states:
+
+    - First  number expected
+    - Second number expected
+    - Calculation completed (implemented as first number with cache argument)
+    - Math error
+
+
+Input behavior in states:
+
+    (Assume input and decimal control is in place already)
+
+    - First number expected:
+
+    (Starts with setting display as cache. Cache is whatever was passed to it
+     on creation, or 0 by default)
+
+        * Number: Stores a number in a temporary cache in itself (which can be
+                  appended to), while telling context object to overwrite the
+                  display field with it. (If this is a first time that a number
+                  has been pressed on this object, the current cache is
+                  overrwitten - as is display).
+
+        * Decimal: As expected.
+
+        * Operand: Transitions context object to 'Second number expected' state,
+                   while passing the 'first number' and 'operand' values to the
+                   new state object.
+
+        * Equals: Replaces itself with a new First Number Expected state object
+                  with the current cache as the constructor argument
+
+        * Delete: Performs deletion operation on cache, and deals with the
+                  context's provided display handler as appropriate.
+
+        * C key : Goes to a new First number expected state with a clean cache
+
+
+    - Second number expected:
+
+    (Expects to receive 'First Number' and 'Operand' values as constructor)
+        
+    (Starts with displaying first number which it will also maintain in cache)
+
+        * Number: Also stores this second number in another temporary cache
+                  within itself, similar to how 'First number expected' state
+                  did with its main input cache - displaying it
+
+        * Decimal: Same as previous state
+
+        * Operand: Performs the calculation, transitions to a new Second Number
+                   Expected state, while passing it the answer as first number
+                   as well as the operand
+
+        * Equals: Transitions to a new First number expected state, while
+                  passing it the answer as cache
+
+        * Delete: Performs deletion operation on the cache
+
+        * C key : Goes to a new First number expected state with a clean cache
+
+
+    - Math error:
+
+        Nothing happens unless C key is pressed. All other inputs are ignored.
+        And when C is pressed, it transitions state to a First Number Expected
+        state with a clean cache.
+
+
+
+
+
+questions:
+
+- What about user pressing '=' in the first number expected mode? Will pressing
+  another number not start over with clean input (as it should)
