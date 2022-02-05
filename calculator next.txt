@@ -1,0 +1,13 @@
+
+
+
+bug:
+
+ignores 0 after decimal
+because appending a 0 means nothing after a .x value
+
+
+
+subtract operator after other operators
+to multiply by -2, etc.
+

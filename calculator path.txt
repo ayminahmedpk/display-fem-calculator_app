@@ -1,8 +1,0 @@
-
-
-int calculator
-
-2dp / float calculator
-
-negative values calculator
-
