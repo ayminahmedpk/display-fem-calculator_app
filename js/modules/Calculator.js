@@ -12,7 +12,7 @@ export class Calculator {
     displayPanel = document.querySelector('.screen-text') ;
 
     updateDisplay = (value) => {
-        this.displayPanel.innerHTML = value;
+        this.displayPanel.innerHTML = value.toLocaleString();
     }
 
     getInput(inputType, inputValue) {
