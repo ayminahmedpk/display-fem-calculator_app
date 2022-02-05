@@ -30,12 +30,22 @@ setInitialTheme();
 slider.addEventListener('change', (e) => { handleThemeChange(e); });
 
 
-
-
 //import {Menu} from './modules/menu';
 
 
 window.calculator = new Calculator();
+
+const buttonHandler = (e) => {
+    //console.log(e.currentTarget);
+    window.calculator.getInput(
+        e.currentTarget.getAttribute('data-key-type')  ,
+        e.currentTarget.getAttribute('data-key-value') ,
+    );
+};
+
+document.querySelectorAll('.keypad button').forEach(btn => {
+    btn.addEventListener('click', buttonHandler);
+})
 
 // To start, run context.enterMenu();
 
