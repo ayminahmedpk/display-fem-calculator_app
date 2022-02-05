@@ -7,10 +7,13 @@ export class SecondNum {
         this.context  = context  ;
         this.firstNum = firstNum ;
         this.operator = operator ;
+
+        this.context.updateDisplay(this.firstNum)
     }
     
-    number     = 0;
-    MAX_LENGTH = 12;
+    decimalFlag = false;
+    number      = 0;
+    MAX_LENGTH  = 12;
 
 
     isValidLength = (value) => {
@@ -19,14 +22,17 @@ export class SecondNum {
     }
     
 
-    appendNumber = (value) => {
-        const newNumber   = parseFloat(`${this.number}${value}`)
+    appendNumber = (value, decimal = false) => {
+        let newNumber;
+        if(decimal) { newNumber = parseFloat(`${this.number}.${value}`) }
+        else { newNumber = parseFloat(`${this.number}${value}`) }
         if (this.isValidLength(newNumber)) { this.number = newNumber; }
     }
 
 
     resetCalculator = () => {
         this.number = 0;  // for now, that's all; later, states
+        this.state = new FirstNum(this.context, 0);
     }
 
 
@@ -36,7 +42,23 @@ export class SecondNum {
     }
 
 
-    acceptNumber   = (value) =>  { this.appendNumber(value) }
+    acceptNumber   = (value) =>  {
+
+        if(this.decimalFlag) {
+            this.appendNumber(value, true);
+            this.decimalFlag = false;
+            return;
+        }
+        
+        if(this.firstInput) { this.number = 0; }
+        
+        if(value=='decimal') {
+            this.decimalFlag = true;
+            return;
+        }
+
+        this.appendNumber(value);
+    }
     
 
     acceptControl  = (value) =>  {
@@ -59,28 +81,38 @@ export class SecondNum {
         switch (this.operator) {
 
             case 'add':
-                return this.firstNum + this.number;
+                result = this.firstNum + this.number;
+            break;
 
             case 'subtract':
-                return this.firstNum - this.number;
+                result = this.firstNum - this.number;
+            break;
 
             case 'divide':
-                return this.firstNum / this.number;
+                result = this.firstNum / this.number;
+            break;
 
             case 'multiply':
-                return this.firstNum * this.number;
+                result = this.firstNum * this.number;
+            break;
 
         }
-        return result;
+
+        return Number.isSafeInteger(result) ? result : result.toFixed(2);
     }
 
 
     acceptOperator = (value) => {
         console.log(this.getAnswer());
         switch (value) {
+            
             case 'equals':
                 this.context.state = new FirstNum(this.context, this.getAnswer());
             break;
+
+            default:
+                this.context.state = new SecondNum(this.context, this.getAnswer(), value)
+                break;
         }
     }
 
@@ -99,6 +131,10 @@ export class SecondNum {
             case 'operator':
                 this.acceptOperator(inputValue);
             return;
+
+            case 'decimal':
+                this.acceptNumber(inputValue);
+            break;
 
         }
         this.context.updateDisplay(this.number);

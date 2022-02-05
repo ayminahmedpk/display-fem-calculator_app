@@ -5,7 +5,7 @@ export class Context {
     constructor() {
         console.log('context created');
     }
-    state = null;
+    state      = null;
     userchoice = '';
 
     render() {
