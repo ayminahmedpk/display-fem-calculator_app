@@ -5,7 +5,7 @@ export class Calculator {
 
     constructor() {
         console.log('Calculator created');
-        this.state = new FirstNum(this);
+        this.state = new FirstNum(this, 399981);
     }
 
     
