@@ -1,8 +1,0 @@
-
-
-* should save input into cache and propagate the cache
-
-* should start with 0
-    - any number becomes that number
-
-* any additional number is appended to that number

@@ -1,19 +1,8 @@
-import { SecondNum } from './SecondNum.js';
+import { FirstNum }  from './FirstNum.js';
 
-
-export class FirstNum {
+export class Helper {
     
-    constructor( context, number = 0 ) {
-        this.context = context;
-        this.number  = number;
-        
-        this.context.updateDisplay(this.number);
-    }
-
-    firstInput  = true;
-    decimalFlag = false;
-    MAX_LENGTH  = 12;
-
+    MAX_LENGTH  = 10;
 
 
     isValidLength = (value) => {
@@ -43,20 +32,7 @@ export class FirstNum {
 
 
     acceptNumber   = (value) =>  {
-
-        if(this.decimalFlag) {
-            this.appendNumber(value, true);
-            this.decimalFlag = false;
-            return;
-        }
-        
         if(this.firstInput) { this.number = 0; }
-        
-        if(value=='decimal') {
-            this.decimalFlag = true;
-            return;
-        }
-
         this.appendNumber(value);
     }
     
@@ -75,18 +51,6 @@ export class FirstNum {
         }
     }
 
-    acceptOperator = (value) => {
-        switch (value) {
-            case 'equals' :
-                this.context.state = new FirstNum(this.context, this.number);
-            break;
-            
-            default:
-                this.context.state = new SecondNum(this.context, this.number, value);
-            break;
-        }
-    }
-
 
     getInput(inputType, inputValue) {
         switch (inputType) {
@@ -101,19 +65,13 @@ export class FirstNum {
 
             case 'operator':
                 this.acceptOperator(inputValue);
-            break;
-
-            case 'decimal':
-                this.acceptNumber(inputValue);
-            break;
+            return;
 
         }
         if(this.firstInput) { this.firstInput = false; }
         this.context.updateDisplay(this.number);
     }
-    
 
-    acceptDecimal  = ()      => { }
 
+    acceptDecimal  = () => { }
 }
-

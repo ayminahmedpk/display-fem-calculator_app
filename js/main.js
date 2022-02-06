@@ -1,5 +1,5 @@
 
-import {Calculator} from './modules/calculator.js';
+import {Calculator} from './modules/Calculator.js';
 
 const body   = document.querySelector('body');
 const slider = document.querySelector('.toggle__slider');

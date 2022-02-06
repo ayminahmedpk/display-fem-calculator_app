@@ -1,13 +1,12 @@
 
 
 
-bug:
+* handle decimal input,
+  including x.0y pattern
 
-ignores 0 after decimal
-because appending a 0 means nothing after a .x value
+* handle -ve input,
+  eg: 3 * -0.5
 
 
-
-subtract operator after other operators
-to multiply by -2, etc.
-
+* handle recurring operations
+  eg: [2] [*] [2] [=] [=] [=]
