@@ -1,7 +1,7 @@
 
-import {Calculator} from './modules/Calculator/Calculator.js';
-
 import './modules/Theme.js';
+
+import {Calculator} from './modules/Calculator/Calculator.js';
 
 const displayElement = document.querySelector('.screen-text');
 window.calculator = new Calculator(displayElement);
