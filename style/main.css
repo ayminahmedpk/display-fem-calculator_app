@@ -1,15 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
-/* ------------------------------- <theme-1> -------------------------------- */
-/* ------------------------------ <theme-1 /> ------------------------------- */
-/* ------------------------------- <theme-2> -------------------------------- */
-/* ------------------------------ <theme-2 /> ------------------------------- */
-/* ------------------------------ <theme-3 /> ------------------------------- */
-/* ------------------------------ <theme-3 /> ------------------------------- */
 body.theme-1 {
   background-color: #3a4764;
   color: white;
-  /* Slider-thumb (Chrome, Opera, Safari, Edge) */
-  /* Slider-thumb (Firefox) */
 }
 
 body.theme-1 .toggle__slider {
@@ -34,23 +26,21 @@ body.theme-1 .keypad-container {
 
 body.theme-1 .key {
   background-color: #eae3dc;
+  color: #444b5a;
   -webkit-box-shadow: 0px 4px 0px 0px #b4a597;
           box-shadow: 0px 4px 0px 0px #b4a597;
 }
 
-body.theme-1 .key.key-control .key-text,
-body.theme-1 .key.key-equals .key-text {
-  color: white;
-}
-
 body.theme-1 .key.key-control {
   background-color: #637097;
+  color: white;
   -webkit-box-shadow: 0px 4px 0px 0px #404e72;
           box-shadow: 0px 4px 0px 0px #404e72;
 }
 
 body.theme-1 .key.key-equals {
   background-color: #d03f2f;
+  color: white;
   -webkit-box-shadow: 0px 4px 0px 0px #93261a;
           box-shadow: 0px 4px 0px 0px #93261a;
 }
@@ -58,8 +48,6 @@ body.theme-1 .key.key-equals {
 body.theme-2 {
   background-color: #e6e6e6;
   color: #35352c;
-  /* Slider-thumb (Chrome, Opera, Safari, Edge) */
-  /* Slider-thumb (Firefox) */
 }
 
 body.theme-2 .toggle__slider {
@@ -84,23 +72,21 @@ body.theme-2 .keypad-container {
 
 body.theme-2 .key {
   background-color: #e5e4e1;
+  color: #444b5a;
   -webkit-box-shadow: 0px 4px 0px 0px #a69d91;
           box-shadow: 0px 4px 0px 0px #a69d91;
 }
 
-body.theme-2 .key.key-control .key-text,
-body.theme-2 .key.key-equals .key-text {
-  color: white;
-}
-
 body.theme-2 .key.key-control {
   background-color: #377f86;
+  color: white;
   -webkit-box-shadow: 0px 4px 0px 0px #1b5f65;
           box-shadow: 0px 4px 0px 0px #1b5f65;
 }
 
 body.theme-2 .key.key-equals {
   background-color: #ca5502;
+  color: white;
   -webkit-box-shadow: 0px 4px 0px 0px #893901;
           box-shadow: 0px 4px 0px 0px #893901;
 }
@@ -108,8 +94,6 @@ body.theme-2 .key.key-equals {
 body.theme-3 {
   background-color: #160628;
   color: #ffe53d;
-  /* Slider-thumb (Chrome, Opera, Safari, Edge) */
-  /* Slider-thumb (Firefox) */
 }
 
 body.theme-3 .toggle__slider {
@@ -134,30 +118,21 @@ body.theme-3 .keypad-container {
 
 body.theme-3 .key {
   background-color: #341c4f;
+  color: #ffe53d;
   -webkit-box-shadow: 0px 4px 0px 0px #871c9c;
           box-shadow: 0px 4px 0px 0px #871c9c;
 }
 
-body.theme-3 .key .key-text {
-  color: #ffe53d;
-}
-
-body.theme-3 .key.key-control .key-text {
-  color: white;
-}
-
-body.theme-3 .key.key-equals .key-text {
-  color: black;
-}
-
 body.theme-3 .key.key-control {
   background-color: #58077d;
+  color: white;
   -webkit-box-shadow: 0px 4px 0px 0px #bc15f4;
           box-shadow: 0px 4px 0px 0px #bc15f4;
 }
 
 body.theme-3 .key.key-equals {
   background-color: #00e0d1;
+  color: #444b5a;
   -webkit-box-shadow: 0px 4px 0px 0px #6cf9f2;
           box-shadow: 0px 4px 0px 0px #6cf9f2;
 }
@@ -174,21 +149,9 @@ body {
   font-weight: 700;
 }
 
-/* body {
-    height: 100%;
-} */
 .content-container {
-  /* height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; */
   padding: 28px 24px;
   max-width: 375px;
-  /* & > div {
-        width: 327px;
-        &:first-child { margin-top: auto;}
-        &:last-child {margin-bottom: auto;}
-    } */
 }
 
 .labels-container {
@@ -273,10 +236,6 @@ body {
   width: 18px;
   height: 18px;
   border-radius: 15px;
-  /* cursor: grab;
-    &:active {
-        cursor:grabbing;
-    } */
 }
 
 /* Slider-thumb (Firefox) */
@@ -286,10 +245,6 @@ body {
   height: 18px;
   cursor: pointer;
   border-radius: 15px;
-  /* cursor: -moz-grab;
-    &:active {
-        cursor: -moz-grabbing;
-    } */
 }
 
 /* ------------------------------- <toggle /> ------------------------------- */

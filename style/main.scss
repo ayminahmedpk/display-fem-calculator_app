@@ -14,28 +14,13 @@
 body {
     font-family      : 'Spartan', sans-serif ;
     font-weight      : 700                   ;
-    // height: 100%;
 }
-
-/* body {
-    height: 100%;
-} */
 
 
 .content-container {
-    /* height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; */
+
     padding: 28px 24px;
     max-width: 375px;
-    
-    
-    /* & > div {
-        width: 327px;
-        &:first-child { margin-top: auto;}
-        &:last-child {margin-bottom: auto;}
-    } */
 }
 
 
@@ -111,11 +96,6 @@ body {
     width         : 18px              ;
     height        : 18px              ;
     border-radius : 15px              ;
-
-    /* cursor: grab;
-    &:active {
-        cursor:grabbing;
-    } */
 }
 
 
@@ -128,11 +108,6 @@ body {
     height        : 18px    ;
     cursor        : pointer ;
     border-radius : 15px;
-
-    /* cursor: -moz-grab;
-    &:active {
-        cursor: -moz-grabbing;
-    } */
 }
 /* ------------------------------- <toggle /> ------------------------------- */
 
@@ -213,251 +188,3 @@ body {
 
 
 @media screen and (min-width: 600px) { @import './desktop'; }
-
-
-
-
-
-
-// // Backup
-// @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
-// @import './themes';
-
-
-// * {
-//     margin     : 0          ;
-//     padding    : 0          ;
-//     box-sizing : border-box ;
-// }
-
-
-// html {
-//     background-color : $theme-1-main-background ;
-//     color            : $theme-1-text            ;
-//     font-family      : 'Spartan', sans-serif ;
-//     font-weight      : 700                   ;
-//     // height: 100%;
-// }
-
-// /* body {
-//     height: 100%;
-// } */
-
-
-// .content-container {
-//     /* height: 100%;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center; */
-//     padding: 28px 24px;
-//     max-width: 375px;
-    
-    
-//     /* & > div {
-//         width: 327px;
-//         &:first-child { margin-top: auto;}
-//         &:last-child {margin-bottom: auto;}
-//     } */
-// }
-
-
-// .labels-container {
-//     display         : flex;
-//     justify-content : space-between;
-//     align-items     : center;
-// }
-
-
-// .logo {
-//     font-size      : 32px    ;
-//     letter-spacing : -0.02em ;
-// }
-
-
-// .theme-label {
-//     margin : auto 22px 4px auto;
-    
-//     font-size      : 12px;
-//     letter-spacing : 0.08em;
-// }
-
-
-
-// /* -------------------------------- <toggle> -------------------------------- */
-// .toggle {
-//     display        : flex;
-//     flex-direction : column;
-    
-//     width: 71px;
-// }
-
-
-// .toggle__labels {
-//     display         : flex;
-//     justify-content : space-between;
-    
-//     width           : 100%;
-//     padding         : 0px 13px; // 4 (slider padding) + 9 (thumb width) = 13px
-//     font-size       : 12px;
-
-//     .label-1 { transform: translate(-50%) ; } // Number STARTS at center, but we
-//     .label-3 { transform: translate( 50%) ; } // need it CENTERED at center
-//     .label-2 {
-//         margin-left: 13px;
-//         transform: translate(-50%);
-//     } // Because side paddings apply only to edge elements, not middle ones
-// }
-
-
-// .toggle__slider {
-//     // Resets
-//     -webkit-appearance : none;
-//     appearance         : none;
-//     outline            : none;
-
-//     width         : 100%;
-//     padding       : 4px;
-//     margin-top    : 4px;
-//     background    : $theme-1-toggle-background;
-//     border-radius : 15px;
-
-//     cursor: pointer;
-// }
-
-
-// /* Slider-thumb (Chrome, Opera, Safari, Edge) */
-// .toggle__slider::-webkit-slider-thumb {
-//     // Resets
-//     -webkit-appearance : none ;
-//     appearance         : none ;
-
-//     width         : 18px              ;
-//     height        : 18px              ;
-//     border        : 1px solid black ;
-//     border-radius : 15px              ;
-
-//     background    : $theme-1-toggle ;
-
-//     /* cursor: grab;
-//     &:active {
-//         cursor:grabbing;
-//     } */
-// }
-
-
-// /* Slider-thumb (Firefox) */
-// .toggle__slider::-moz-range-thumb {
-//     // reset
-//     border: none;
-
-//     width         : 18px    ;
-//     height        : 18px    ;
-//     background    : $theme-1-toggle ;
-//     cursor        : pointer ;
-//     border-radius : 15px;
-//     border        : 1px solid black;
-
-//     /* cursor: -moz-grab;
-//     &:active {
-//         cursor: -moz-grabbing;
-//     } */
-// }
-// /* ------------------------------- <toggle /> ------------------------------- */
-
-
-
-// .screen {
-//     display         : flex     ;
-//     justify-content : flex-end ;
-//     align-items     : center   ;
-    
-//     margin-top    : 32px ;
-//     padding       : 24px ;
-//     border-radius : 10px ;
-
-//     background-color : $theme-1-screen-background ;
-
-//     .screen-text {
-//         font-size        : 32px               ;
-//         letter-spacing   : -0.015em           ;
-//         line-height      : 1.25               ;
-//     }
-// }
-
-
-// .keypad-container {
-//     margin-top    : 24px  ;
-//     height        : 420px ;
-//     border-radius : 10px  ;
-//     padding       : 24px 24px 28px;
-
-//     background-color : $theme-1-keypad-background;
-// }
-
-
-
-// /* -------------------------------- <keypad> -------------------------------- */
-// .keypad {
-//     display               : grid;
-//     grid-template-columns : repeat(4, 60px);
-//     grid-template-rows    : repeat(5, 60px);
-//     grid-column-gap       : 13px;
-//     grid-row-gap          : 17px;
-// }
-
-
-// .key {
-//     border        : none ;
-//     border-radius : 5px  ;
-
-//     background-color : $theme-1-key-background             ;
-//     box-shadow       : 0px 4px 0px 0px $theme-1-key-shadow ;
-
-//     cursor: pointer;
-
-//     &:active {
-//         transform : translateY(2px) scale(0.95);
-//         filter    : brightness(80%);
-//     }
-
-//     .key-text {
-//         font-family : 'Spartan', sans-serif ;
-//         font-weight : 700                   ;
-//         font-size   : 28px                  ;
-//         margin-top  : 6px                   ;
-//     }
-// }
-
-
-// .key.key-long {
-//     grid-column: span 2;
-// }
-
-
-// .key.key-control,
-// .key.key-equals {
-//     .key-text {
-//         margin-top     : 2px;
-//         margin-right   : 1px;
-
-//         color          : $theme-1-text  ;
-//         font-size      : 17px    ;
-//         letter-spacing : -0.06em ;
-//     }
-// }
-
-
-// .key.key-control {
-//     background-color : $theme-1-control-key-background             ;
-//     box-shadow       : 0px 4px 0px 0px $theme-1-control-key-shadow ;
-// }
-
-
-// .key.key-equals {
-//     background-color : $theme-1-equals-key-background             ;
-//     box-shadow       : 0px 4px 0px 0px $theme-1-equals-key-shadow ;
-// }
-// /* ------------------------------- <keypad /> ------------------------------- */
-
-
-// @media screen and (min-width: 600px) { @import './desktop'; }

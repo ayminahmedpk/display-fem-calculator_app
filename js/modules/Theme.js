@@ -11,7 +11,7 @@ const setInitialTheme = () => {
         body.className  = themeName;
     }
     else {
-        slider.value = 1;
+        slider.value   = 1;
         body.className = 'theme-1';
     }
 }
@@ -20,7 +20,7 @@ const setInitialTheme = () => {
 const handleThemeChange = (e) => {
     localStorage.setItem('prefers-color-scheme', e.target.value)
     const themeName = `theme-${e.target.value}`;
-    body.className = themeName;
+    body.className  = themeName;
 }
 
 
