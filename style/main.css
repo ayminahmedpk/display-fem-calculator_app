@@ -147,9 +147,11 @@ body.theme-3 .key.key-equals {
 body {
   font-family: 'Spartan', sans-serif;
   font-weight: 700;
+  min-width: 375px;
 }
 
 .content-container {
+  margin: 0 auto;
   padding: 28px 24px;
   max-width: 375px;
 }
@@ -321,7 +323,7 @@ body {
 }
 
 /* ------------------------------- <keypad /> ------------------------------- */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 740px) {
   .content-container {
     display: -webkit-box;
     display: -ms-flexbox;
