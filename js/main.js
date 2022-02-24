@@ -6,10 +6,11 @@ import {Calculator} from './modules/Calculator/Calculator.js';
 const displayElement = document.querySelector('.screen-text');
 window.calculator = new Calculator(displayElement);
 
-const buttonHandler = (e) => {
-    window.calculator.processInput(e.currentTarget.getAttribute('data-key-value'));
-};
+const keypadHandler = (e) => {
+    const button = e.target.closest('.key');
+    if (button) {
+        window.calculator.processInput(button.getAttribute('data-key-value'));
+    }
+}
 
-document.querySelectorAll('.keypad button').forEach(btn => {
-    btn.addEventListener('click', buttonHandler);
-});
+document.querySelector('.keypad').addEventListener('click', keypadHandler);
